@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #0b0f19;
+  color: #fff;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(0, 170, 255, 0.2), transparent 35%),
+    linear-gradient(135deg, #050816, #0b0f19 50%, #101a33);
+  z-index: -1;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 14, 28, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0, 180, 255, 0.22);
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #c9d4ff;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.primary {
+  background: linear-gradient(135deg, #00aaff, #0066ff);
+  color: #fff;
+}
+
+.secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px 8px;
+  border-radius: 16px;
+}
+
+.info-box span {
+  display: block;
+  font-size: 0.78rem;
+  color: #b8c5ff;
+  margin-bottom: 6px;
+}
+
+.info-box strong {
+  font-size: 0.95rem;
+}
+
+.note {
+  font-size: 0.92rem;
+  color: #b8c5ff;
+  line-height: 1.8;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}
